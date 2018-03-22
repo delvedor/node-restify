@@ -25,6 +25,14 @@ The new version of restify never returns `RequestAbortedError`.
 Option `strictRouting` is removed `createServer({ strictRouting: false })`.
 Strict routing is the new default.
 
+### Path must to start with `/`
+
+In restify 7.x path must start with a `/`.
+For example `server.get('foo')` is invalid, change it to `server.get('/foo')`.
+
+If you use [enroute](https://github.com/restify/enroute) be sure
+that you updated it to the latest version.
+
 ### Different `RegExp` usage in router path and wildcards
 
 restify's new router backend
